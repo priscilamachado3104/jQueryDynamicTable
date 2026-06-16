@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 
+File: DynamicMult.table.html
+Priscila Machado, UMass Lowell Computer Science, priscila_machado@student.uml.edu
+Copyright (c) 2026 by Priscila Machado. All rights reserved.
+  Created: Jun, 11th, 2026. Hw4 part 1
+  Description: This page displays a dynamic multiplication table based on user input.
+               It uses the jQuery Validation plugin to check the values entered in the
+               form and shows error messages if anything is wrong.
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Interactive Dynamic Table with jQuery Validation</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery Validation Plugin CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+  
+
+    
+
+</head>
+<body>
+    <h1>Dynamic Multiplication Table</h1>
+    <div class="content-box">
+        
+        <div class="form-section"> 
+            <form id="Form">
+                <label for="">Enter Minimun column Value (-50,50):</label><br>
+                <input type="text" id="Mincolumn" name="Mincolumn">
+                <span id="error-Mincolumn"></span><br>
+
+            
+                <label for="">Enter Maximum column Value (-50,50):</label><br>
+                <input type="text" id="Maxcolumn" name="Maxcolumn">
+                <span id="error-Maxcolumn"></span><br>
+
+                <label for="">Enter Minimun row Value (-50,50):</label><br>
+                <input type="text" id="Minrow" name="Minrow">
+                <span id="error-Minrow"></span><br>
+
+                <label for="">Enter Maximum row Value (-50,50):</label><br>
+                <input type="text" id="Maxrow" name="Maxrow">
+                <span id="error-Maxrow"></span><br>
+
+                <button type="submit">Generate Table</button>
+
+            </form>
+            <div id="errorContainer"></div>
+    
+            
+        </div>
+        
+        <div id="tableContainer"></div>
+        
+    </div>
+    <footer id="footer">Priscila Machado, UMass Lowell Computer Science, Copyright (c) 2026.</footer> 
+    
+    <!--scripts -->
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

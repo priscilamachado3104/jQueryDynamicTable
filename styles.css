@@ -1,0 +1,267 @@
+/*
+  File: styles.css
+  Priscila Machado, UMass Lowell Computer Science
+  priscila_machado@student.uml.edu
+
+  Copyright (c) 2026 by Priscila Machado.
+  All rights reserved.
+
+  Description:
+  Styles for the Dynamic Multiplication Table.
+  Controls page layout, form styling, table appearance,
+  jQuery UI sliders, and tab styling.
+*/
+
+
+body {
+    font-family: Karla, Martel, serif;
+    background-color: #f3f4f9;
+    color: #67526a;
+    margin: 0;
+    overflow-x:hidden;
+}
+
+
+/* --PAGE LAYOUT--*/
+
+.content-box {
+    padding: 20px;
+    
+}
+
+.top-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+/* Form card */
+.form-panel {
+    width: 200px;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+/* Tabs section */
+#myTabs {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+/* --HEADER-- */
+
+h1 {
+    padding: 10px;
+    text-align: center;
+    color: #c86b98;
+    border-bottom: 1px solid #ffd6e7;
+}
+
+
+/* --FORM--*/
+
+#Form {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #ffd6e7;
+    width: 150px;
+}
+
+#Form label:not(.error) {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#Form input {
+    width: 100px;
+    background-color: #fffafd;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-bottom: 3px;
+    border: 1px solid #f3b8d1;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+/* --BUTTONS-- */
+
+button {
+    padding: 8px 12px;
+    border: 1px solid #f3b8d1;
+    border-radius: 10px;
+    background-color: #ffd6e7;
+    color: #67526a;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ee95b7;
+}
+
+#clearTabs {
+    margin-top: 12px;
+}
+
+
+/* --VALIDATION ERRORS-- */
+
+label.error {
+    color: #d95375;
+    font-size: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+#errorContainer {
+    width: 600px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+
+/* --TABLES-- */
+
+#tableContainer {
+    overflow: auto;
+    padding: 10px;
+    width: 100%;
+    max-height: 500px;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #f5c6d6;
+    padding: 3px 4px;
+    text-align: center;
+    min-width: 30px;
+    font-size: 11px;
+}
+
+/* Top row */
+tr:first-child th {
+    background-color: #f7bfd6;
+    color: #7a4762;
+    position: sticky;
+    top: 0;
+}
+
+/* First column */
+th:first-child {
+    background-color: #f7bfd6;
+    color: #7a4762;
+    position: sticky;
+    left: 0;
+}
+
+/* Empty corner cell */
+tr:first-child th:first-child {
+    background-color: transparent;
+    border: none;
+}
+
+
+/* --SLIDERS--*/
+
+.ui-slider {
+    width: 110px;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    border-radius: 16px;
+    background: #ffd6e7;
+    border: 1px solid #f3b8d1 !important;
+    height: 6px;
+}
+
+.ui-slider-handle {
+    width: 8px !important;
+    height: 18px !important;
+    top: -6px !important;
+    cursor: pointer !important;
+    background: #ee95b7 !important;
+}
+
+
+/* --TABS--*/
+
+#myTabs,
+#myTabs * {
+    font-family: Karla, Martel, serif;
+}
+
+#myTabs {
+    margin-top: 6px;
+    max-width: 900px;
+    width: 100%;
+
+    border: 2px solid  #ffd6e7;
+    border-radius: 15px;
+    background: white;
+}
+
+#myTabs .ui-tabs-nav {
+    padding: 2px;
+    background: #fffafd;
+    border: none;
+}
+
+
+
+#preview-tab,
+#myTabs > div[id^="tab-"] {
+    padding: 10px;
+    height: 440px;
+    overflow: auto;
+}
+#myTabs .ui-tabs-nav li {
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #f3b8d1;
+    background: #fffafd;
+}
+#myTabs .ui-tabs-nav li.ui-tabs-active {
+    background: #ffd6e7;
+    border-color: #ee95b7;
+    color: #7a4762 !important;
+    font-size:medium;
+}
+
+
+
+
+
+/* Tab text */
+#myTabs .ui-tabs-nav li a {
+    color: #7a4762;
+    font-weight: bold;
+    padding: 4px 8px; 
+    font-size: 12px;
+}
+
+/* Close button on tabs */
+.tab-close {
+    cursor: pointer;
+    color: #c86b98;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.tab-close:hover {
+    color: #d95375;
+}
+
+
+/* --FOOTER--*/
+
+#footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #7a4762;
+}
